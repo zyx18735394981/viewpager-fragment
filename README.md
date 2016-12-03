@@ -1,42 +1,37 @@
 MainActivity
 
-         package com.zyx.viewpagerfragment_12_1;
-         import android.graphics.Color;
-        import android.os.Bundle;
-        import android.support.v4.app.Fragment;
-        import android.support.v4.app.FragmentActivity;
-        import android.support.v4.view.ViewPager;
-        import android.view.View;
-        import android.widget.LinearLayout;
-        import android.widget.TextView;
+            package com.zyx.viewpagerfragment_12_1;
+            import android.graphics.Color;
+            import android.os.Bundle;
+            import android.support.v4.app.Fragment;
+           import android.support.v4.app.FragmentActivity;
+           import android.support.v4.view.ViewPager;
+           import android.view.View;
+           import android.widget.LinearLayout;
+           import android.widget.TextView;
 
-        import com.zyx.viewpagerfragment_12_1.Adapter.MyPagerAdapter;
-        import com.zyx.viewpagerfragment_12_1.Fragment.Fragment1;
-        import com.zyx.viewpagerfragment_12_1.Fragment.Fragment2;
+           import com.zyx.viewpagerfragment_12_1.Adapter.MyPagerAdapter;
+           import com.zyx.viewpagerfragment_12_1.Fragment.Fragment1;
+           import com.zyx.viewpagerfragment_12_1.Fragment.Fragment2;
 
-        import java.util.ArrayList;
-        import java.util.List;
+           import java.util.ArrayList;
+           import java.util.List;
+           public class MainActivity extends Fragm entActivity {
+               private LinearLayout ll_line;
+             private LinearLayout ll_title;
+             private ViewPager vp;
+             //存放四个页面,集合里面放Fragment，当前的activity要继承FragmentActivity
+             private List<Fragment> list;
 
+             private List<TextView> listTitle;//title
+             private List<TextView> listLine;//line
 
-        public class MainActivity extends Fragm entActivity {
-            private LinearLayout ll_line;
-            private LinearLayout ll_title;
-            private ViewPager vp;
-            //存放四个页面,集合里面放Fragment，当前的activity要继承FragmentActivity
-            private List<Fragment> list;
+             @Override
+             protected void onCreate(Bundle savedInstanceState) {
+                 super.onCreate(savedInstanceState);
+                 setContentView(R.layout.activity_main);
 
-            private List<TextView> listTitle;//title
-            private List<TextView> listLine;//line
-
-
-
-
-            @Override
-            protected void onCreate(Bundle savedInstanceState) {
-                super.onCreate(savedInstanceState);
-                setContentView(R.layout.activity_main);
-
-                initUI();//初始化控件
+                 initUI();//初始化控件
 
 
                 initData();//初始化数据
